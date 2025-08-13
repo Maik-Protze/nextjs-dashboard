@@ -2,8 +2,8 @@ import bcrypt from 'bcrypt';
 import postgres from 'postgres';
 import { invoices, customers, revenue, users } from '../lib/placeholder-data';
 
-if (!prozess.env.POSTGRES_URL) {
-  throw new Error('POSTGRES_URL is not definded')
+if (!process.env.POSTGRES_URL) {
+  throw new Error('POSTGRES_URL is not defined')
 }
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
